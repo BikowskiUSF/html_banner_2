@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.trenchbanner {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: calc(100vw * 5 / 21); /* To maintain 21:5 ratio */
+    background: url('https://cdn.shopify.com/s/files/1/0606/9714/9634/files/trench_bannerstill.png?v=1696450892') no-repeat center center / cover;
+    overflow: hidden;
+}
+
+.column {
+    flex: 1;
+}
+
+.hover-column {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Initially, the video is not displayed */
+}
+
+.hover-column:hover #video {
+    display: block; /* The video is displayed when the middle column is hovered over */
+}
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    #video {
+        display: none !important; /* Ensure video doesn't appear on mobile */
+    }
+}
+

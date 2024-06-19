@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Banner</title>
+    <link rel="stylesheet" href="trenchbanner.css">
+</head>
+<body>
+    <div class="trenchbanner">
+        <div class="column"></div>
+        <div class="column hover-column" id="hover-column">
+            <video id="video" muted playsinline>
+                <source src="https://cdn.shopify.com/videos/c/o/v/0e326e7ba1114bba9be1c07b93a6c21d.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="column"></div>
+    </div>
+    <script>
+const video = document.getElementById('video');
+const hoverColumn = document.getElementById('hover-column');
+
+// Function to detect if the device is mobile
+function isMobile() {
+    return window.innerWidth <= 767;
+}
+
+hoverColumn.addEventListener('click', function(e) {
+    window.location = 'https://www.thetrenchacademy.com/';
+});
+
+hoverColumn.addEventListener('mouseover', function() {
+    if (isMobile()) return; // Do nothing for mobile on hover
+    video.play();
+});
+
+hoverColumn.addEventListener('mouseout', function() {
+    if (isMobile()) return; // Do nothing for mobile on mouse out
+    video.pause();
+    video.currentTime = 0;
+});
+
+video.addEventListener('ended', () => {
+    video.pause();
+});
+
+    </script>
+</body>
+</html>

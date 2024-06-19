@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Gimme Danger';
+  src: url("{{ 'Gimme Danger.woff2' | asset_url }}") format('woff2');
+}
+
+@font-face {
+  font-family: 'XXII DONT MESS WITH VIKINGS';
+  src: url("{{ 'XXII DONT MESS WITH VIKINGS.woff2' | asset_url }}") format('woff2');
+}
+
+#the-trench-academy {
+    color: #111820;
+}
+
+#the-trench-academy h1, #the-trench-academy .header {
+    font-family: 'Gimme Danger', sans-serif;
+}
+
+#the-trench-academy h2, #the-trench-academy .subheader {
+    font-family: 'XXII DONT MESS WITH VIKINGS', serif;
+}
